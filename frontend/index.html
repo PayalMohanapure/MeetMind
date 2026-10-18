@@ -1,0 +1,21 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+    <title>MeetMind · Meetings that write their own minutes</title>
+    <meta name="description" content="Video calls that turn into a speaker-labelled transcript, clear minutes, and answers that link to the moment someone said it." />
+    <meta name="theme-color" content="#141A3A" />
+    <meta property="og:title" content="MeetMind" />
+    <meta property="og:description" content="Meetings that write their own minutes." />
+    <meta property="og:type" content="website" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <script>
+      try { var t = JSON.parse(localStorage.getItem('mm-theme')); var d = t === 'night' || (t === 'system' && matchMedia('(prefers-color-scheme: dark)').matches); if (d) document.documentElement.dataset.theme = 'night'; } catch (e) {}
+    </script>
+  </head>
+  <body>
+    <div id="root"></div>
+    <script type="module" src="/src/main.jsx"></script>
+  </body>
+</html>

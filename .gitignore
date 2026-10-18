@@ -1,0 +1,62 @@
+# secrets (keep the example templates)
+.env
+.env.*
+**/.env
+**/.env.*
+!**/.env.example
+!**/.env.demo
+
+# python
+.venv/
+venv/
+__pycache__/
+*.pyc
+.pytest_cache/
+.ruff_cache/
+
+# node
+node_modules/
+dist/
+
+# test output
+playwright-report/
+test-results/
+reports/
+
+# local audio recordings
+backend/storage/recordings/*
+!backend/storage/recordings/.gitkeep
+*.webm
+
+# docs and internal notes
+docs/
+*_PROMPT*.md
+**/MEETMIND_FIX_AND_RUN.md
+**/TEST_REPORT.md
+backend/qa_report.*
+backend/system_check_report.json
+backend/usecase_report.json
+backend/check_screens/
+
+# local-only tests and helper scripts
+backend/tests/
+backend/scripts/
+backend/qa_suite.py
+backend/api_smoke_test.py
+backend/system_check.py
+backend/usecase_check.py
+backend/check_setup.py
+backend/test_neon.py
+backend/0002_ordering_and_tokens.py
+frontend/tests/
+frontend/playwright*.config.js
+frontend/src/**/*.test.js
+frontend/src/test-setup.js
+
+# old folders, editors, OS
+frontend_old/
+backend_old/
+.vscode/
+.idea/
+.DS_Store
+Thumbs.db

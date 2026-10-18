@@ -1,0 +1,86 @@
+/* MeetMind design tokens — "Aurora Glass" (V4+) */
+:root {
+  --font-display: "Bricolage Grotesque Variable", ui-sans-serif, system-ui, sans-serif;
+  --font-ui: "Instrument Sans Variable", ui-sans-serif, system-ui, sans-serif;
+  --font-record: "Newsreader Variable", Georgia, serif;
+
+  /* Daylight surfaces */
+  --canvas: #EEF1FA; --surface: #FFFFFF; --surface-2: #F5F7FD; --surface-3: #E7EBF7; --line: #DFE4F1; --line-strong: #CBD2E6;
+  --ink: #1A2042; --ink-2: #4F5779; --ink-3: #636B8C;
+
+  /* Signal colours (one job each) */
+  --cobalt: #3150FF; --cobalt-hover: #2440E6; --cobalt-soft: #E8ECFF; --cobalt-ring: rgba(49,80,255,.22);
+  --sun: #FFC53D; --sun-soft: #FFF4D6; --sun-ink: #8A5A00;
+  --iris: #7357F6; --iris-soft: #F0ECFF; --iris-ink: #5A3FD9;
+  --coral: #E5483A; --coral-soft: #FDECEA; --coral-ink: #C2362A;
+  --ok: #1F9D57; --ok-soft: #E3F6EB; --ok-ink: #146C3D;
+
+  /* Voices */
+  --voice-1: #3F5EF0; --voice-2: #FF8A3D; --voice-3: #CC3D88; --voice-4: #1EA7E1; --voice-5: #7DB52D; --voice-6: #0FA39A;
+  --voice-1-ink: #3355E8; --voice-2-ink: #B95413; --voice-3-ink: #B8307A; --voice-4-ink: #0F739E; --voice-5-ink: #4F7A12; --voice-6-ink: #0A7A73;
+
+  /* Dusk (meeting room, hero) */
+  --d0: #141A3A; --d1: #1C2350; --d2: #262E63; --d3: #313A78; --dl: rgba(226,230,255,.12); --dt: #EEF0FF; --dt2: #B4BAD9;
+
+  /* Atmospheres */
+  --sky: radial-gradient(120% 90% at 18% 12%, #FFE6A8 0%, rgba(255,230,168,0) 38%),
+         radial-gradient(90% 80% at 85% 20%, #C9BEFF 0%, rgba(201,190,255,0) 55%),
+         radial-gradient(120% 120% at 60% 110%, #2F49F5 0%, rgba(47,73,245,0) 60%),
+         linear-gradient(160deg, #8EA2FF 0%, #5B74FF 45%, #3D58F7 100%);
+  --aurora: radial-gradient(60% 55% at 70% 38%, rgba(115,87,246,.55) 0%, rgba(115,87,246,0) 70%),
+            radial-gradient(45% 40% at 85% 75%, rgba(226,85,161,.32) 0%, rgba(226,85,161,0) 70%),
+            radial-gradient(50% 45% at 25% 15%, rgba(255,197,61,.20) 0%, rgba(255,197,61,0) 70%),
+            radial-gradient(70% 60% at 30% 95%, rgba(49,80,255,.55) 0%, rgba(49,80,255,0) 70%),
+            linear-gradient(180deg, #121738 0%, #161C45 55%, #1A2152 100%);
+  --aurora-card: radial-gradient(70% 90% at 92% 10%, rgba(255,214,140,.55) 0%, rgba(255,214,140,0) 50%),
+                 radial-gradient(80% 110% at 100% 100%, rgba(226,85,161,.45) 0%, rgba(226,85,161,0) 60%),
+                 radial-gradient(90% 120% at 0% 100%, rgba(115,87,246,.6) 0%, rgba(115,87,246,0) 60%),
+                 linear-gradient(120deg, #2B44E6 0%, #3E57FF 50%, #6A5BFF 100%);
+  --iris-panel: linear-gradient(160deg, #F4F0FF 0%, #EEEAFF 55%, #F6F0FF 100%);
+
+  --r-control: 12px; --r-card: 18px; --r-sheet: 28px; --r-tile: 18px;
+  --shadow-raise: 0 1px 2px rgba(26,32,66,.05), 0 10px 30px -14px rgba(26,32,66,.18);
+  --shadow-float: 0 30px 70px -28px rgba(20,28,90,.45);
+  --glow-cobalt: 0 10px 24px -10px rgba(49,80,255,.7);
+  --focus: 0 0 0 3px var(--surface), 0 0 0 5px var(--cobalt);
+  --ease: cubic-bezier(.2,.8,.2,1);
+  --grain: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='160' height='160'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.9' numOctaves='2' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='.5'/%3E%3C/svg%3E");
+  color-scheme: light;
+}
+
+/* Night (optional app theme) */
+:root[data-theme="night"] {
+  --canvas: #10153A; --surface: #1A2050; --surface-2: #20275C; --surface-3: #2A3270; --line: rgba(226,230,255,.12); --line-strong: rgba(226,230,255,.22);
+  --ink: #EEF0FF; --ink-2: #B4BAD9; --ink-3: #8C93B8;
+  --cobalt: #5B76FF; --cobalt-hover: #7088FF; --cobalt-soft: rgba(91,118,255,.18);
+  --sun-soft: rgba(255,197,61,.16); --sun-ink: #FFD36E;
+  --iris: #9C87FF; --iris-soft: rgba(156,135,255,.16); --iris-ink: #C2B5FF;
+  --coral: #FF6A5C; --coral-soft: rgba(255,106,92,.16); --coral-ink: #FF9B90;
+  --ok: #3CCB7F; --ok-soft: rgba(60,203,127,.15); --ok-ink: #6FE0A3;
+  --voice-1-ink: #8EA4FF; --voice-2-ink: #FFAA70; --voice-3-ink: #F28CC4; --voice-4-ink: #6CCBF2; --voice-5-ink: #A8D96A; --voice-6-ink: #4FD1C6;
+  --iris-panel: linear-gradient(160deg, #221F5C 0%, #1F1D55 100%);
+  --shadow-raise: 0 1px 2px rgba(0,0,30,.3), 0 10px 30px -14px rgba(0,0,30,.6);
+  --focus: 0 0 0 3px var(--surface), 0 0 0 5px var(--cobalt);
+  color-scheme: dark;
+}
+
+/* Dusk scope: meeting room and dark heroes */
+.dusk {
+  --surface: var(--d1); --surface-2: var(--d2); --surface-3: var(--d3); --line: var(--dl);
+  --ink: var(--dt); --ink-2: var(--dt2); --ink-3: #8C93B8;
+  --cobalt: #4F6BFF; --cobalt-hover: #6680FF;
+  --focus: 0 0 0 2px var(--d0), 0 0 0 4px #8EA2FF;
+  color: var(--dt);
+  color-scheme: dark;
+}
+
+/* Daylight island inside a dark scope (e.g. white cards on the dusk hero) */
+.day {
+  --surface: #FFFFFF; --surface-2: #F5F7FD; --surface-3: #E7EBF7; --line: #DFE4F1; --line-strong: #CBD2E6;
+  --ink: #1A2042; --ink-2: #4F5779; --ink-3: #636B8C;
+  --cobalt: #3150FF; --cobalt-soft: #E8ECFF; --iris: #7357F6; --iris-soft: #F0ECFF; --iris-ink: #5A3FD9;
+  --iris-panel: linear-gradient(160deg, #F4F0FF 0%, #EEEAFF 55%, #F6F0FF 100%);
+  --ok-soft: #E3F6EB; --ok-ink: #146C3D;
+  color: var(--ink);
+  color-scheme: light;
+}

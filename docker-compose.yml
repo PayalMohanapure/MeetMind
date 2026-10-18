@@ -1,0 +1,15 @@
+# The database password is read from a .env file next to this file (copy .env.example to .env).
+services:
+  db:
+    image: pgvector/pgvector:pg16
+    environment:
+      POSTGRES_USER: ${POSTGRES_USER:-meetmind}
+      POSTGRES_PASSWORD: ${POSTGRES_PASSWORD:?set POSTGRES_PASSWORD in the .env file next to docker-compose.yml}
+      POSTGRES_DB: ${POSTGRES_DB:-meetmind}
+    ports:
+      - "5433:5432"
+    volumes:
+      - meetmind-pgdata:/var/lib/postgresql/data
+
+volumes:
+  meetmind-pgdata:
